@@ -11,6 +11,7 @@ function getDataFromApi(searchTerm, callback) {
 
 function renderResult(result) {
   return `
+    <a href='https://www.youtube.com/watch?v=${result.id.videoId}'><img src='${result.snippet.thumbnails.default.url}'></a>
     <p>
       <a class="js-result-name" href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank">${result.snippet.title}</a> 
     </p>
